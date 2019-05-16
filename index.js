@@ -58,6 +58,6 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(process.env.APP_PORT);
+}).listen(process.env.PORT);
 
-console.log(`Server running at http://127.0.0.1:${process.env.APP_PORT}/`);
+console.log(`Server running at http://127.0.0.1:${process.env.PORT}/`);
