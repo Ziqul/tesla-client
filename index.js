@@ -7,9 +7,26 @@ http.createServer(function (request, response) {
     console.log('request ', request.url);
 
     var filePathBase = './public';
-    var filePath = filePathBase + request.url;
+    var filePath;
+
+    if (request.url.indexOf('?') > 0) {
+        filePath =
+            filePathBase + request.url.substr(0, request.url.indexOf('?'));
+    } else {
+        filePath = filePathBase + request.url;
+    }
+
+    console.log('request2 ', filePath);
+
     if (filePath == filePathBase + '/') {
         filePath = filePathBase + '/index.html';
+    }
+
+    if (filePath == filePathBase + '/env') {
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.end(JSON.stringify({
+            "API_URL": process.env.API_URL
+        }), 'utf-8');
     }
 
     var extname = String(path.extname(filePath)).toLowerCase();
