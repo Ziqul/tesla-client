@@ -16,3 +16,8 @@ var bodyTextareaQuill = new Quill('.body #textarea', {
     modules: { toolbar: toolbarOptions },
     theme: 'snow'
 });
+
+function sendData() {
+    console.log('Data sent.');
+    // console.log(bodyTextareaQuill.getContents());
+}
