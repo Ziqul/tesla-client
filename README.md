@@ -7,14 +7,10 @@ DOCKER!
 
 ## Quick start
 To start:
-0. Create `.env` file. Fill it with variables from `.env.example`. Populate `.env` with correct values where needed.
-1. Build docker image:
+1. Create `.env` file. Fill it with variables from `.env.example`. Populate `.env` with correct values where needed.
+2. Build and start docker container:
 ```sh
-docker build -t tesla-client
-```
-2. Start docker container:
-```sh
-docker run -d -p 80:8080 --name tesla-client tesla-client
+docker run --rm -d -p 80:8080 --name tesla-client $(docker build -q .)
 ```
 
 To read logs (logs will be displayed in real time):
