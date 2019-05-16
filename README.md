@@ -22,5 +22,5 @@ docker logs -f -t --since 1s tesla-client
 To stop:
 1.  
 ```sh
-docker kill tesla-client && docker rm tesla-client
+docker kill tesla-client
 ```
