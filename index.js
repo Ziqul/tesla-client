@@ -35,16 +35,11 @@ http.createServer(function (request, response) {
     fs.readFile(filePath, function(error, content) {
         if (error) {
             if(error.code == 'ENOENT'){
-                fs.readFile(
-                    filePathBase + '/404.html',
-                    function(error, content) {
-                        response.writeHead(
-                            200,
-                            { 'Content-Type': 'text/html' }
-                        );
-                        response.end(content, 'utf-8');
-                    }
+                response.writeHead(
+                    301,
+                    { 'Location': '/404/page.html' }
                 );
+                response.end(content, 'utf-8');
             } else {
                 response.writeHead(500);
                 response.end(
