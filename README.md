@@ -10,7 +10,7 @@ To start:
 1. Create `.env` file. Fill it with variables from `.env.example`. Populate `.env` with correct values where needed.
 2. Build and start docker container:
 ```sh
-docker run --rm -d -p 80:8080 --name tesla-client $(docker build -q .)
+docker run --rm -d -p 80:8080 -v "/$(pwd)/public/:/web/public/" --name tesla-client $(docker build -q .)
 ```
 
 To read logs (logs will be displayed in real time):
