@@ -1,7 +1,7 @@
 {
   "name": "tesla-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "YOU  \r NEED  \r DOCKER!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:Ziqul/tesla-client.git"
   }
 }
