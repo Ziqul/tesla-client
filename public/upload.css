@@ -1,0 +1,23 @@
+.container > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.block > div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.block > .input > input,
+.block > .input > textarea
+{
+    width: 100%;
+}
+
+.body > .input > #textarea {
+    min-height: 500px;
+}
+
+.body > .input > #textarea > .ql-editor {
+    min-height: 500px;
+}
