@@ -9,9 +9,7 @@
   },
   "author": "Maxim Sorokin (m.s.v.00a@gmail.com)",
   "license": "ISC",
-  "devDependencies": {
-    "dotenv": "^8.0.0"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git@github.com-personal:Ziqul/tesla-client.git"

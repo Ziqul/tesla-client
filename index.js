@@ -1,4 +1,3 @@
-require('dotenv').config()
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
@@ -15,8 +14,6 @@ http.createServer(function (request, response) {
     } else {
         filePath = filePathBase + request.url;
     }
-
-    console.log('request2 ', filePath);
 
     if (filePath == filePathBase + '/') {
         filePath = filePathBase + '/index.html';
