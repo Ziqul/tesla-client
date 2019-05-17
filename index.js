@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 
 http.createServer(function (request, response) {
-    console.log('request ', request.url);
+    console.log('request', request.url);
 
     var filePathBase = './public';
     var filePath;

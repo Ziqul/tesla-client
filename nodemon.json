@@ -1,0 +1,9 @@
+{
+    "execMap": {
+        "js": "node"
+    },
+    "watch": [
+        "index.js"
+    ],
+    "legacyWatch": true
+}
