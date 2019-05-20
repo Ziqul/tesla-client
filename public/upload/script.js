@@ -44,11 +44,9 @@ function sendData() {
     articleData.body =
         JSON.stringify(bodyTextareaQuill.getContents());
 
-    // fetch(env.API_URL + '/article', {
-    //     method: 'POST',
-    //     body: articleData
     fetch(env.API_URL + '/article', {
-        method: "GET"
+        method: 'POST',
+        body: articleData
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
